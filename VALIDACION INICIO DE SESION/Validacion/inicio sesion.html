@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <body>
+        <div class="navbar">     
+            <h1 class="logo">Inicio de sesion</h1></div><br><br>
+            <div class="content">
+            <form class="Invio" action="inicio sesion.html" method="GET" id="form"> 
+                <center>
+                    <h1>Correo</h1>
+                            <input type="email" name="email" id="email"><br>
+                            <h1>Contraseña</h1>
+                            <input type="password" name="contra" id="contra"><br>
+                        </center>
+                    <button class="enviar" type="submit" value="Enviar" id="submit" style="--clr:#CB3234"><span>Enviar</span><i></i></button>
+            </form>
+        </div>
+<script>
+    // Añadir la clase 'scrolled' cuando el usuario se desplaza hacia abajo
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+const $submit = document.getElementById("submit"),
+      $email = document.getElementById("email"),
+      $contra = document.getElementById("contra");
+
+    function validateInputs() {
+
+if($email.value === ""){
+    alert("No dejar el campo correo vacio.");
+    return false;
+}
+if($contra.value === ""){
+    alert("No dejar el campo contraseña vacio.");
+    return false;
+}
+
+if($email.value === "soporteTecnico@gmail.com" && $contra.value === "SOPORTETECNICO123" ){
+    alert("Sus datos se han cargado exitosamente.");
+    return false;
+return true; 
+}
+else 
+    alert("Se ha producido un error, para mayor informacion contactarse con el soporte tecnico.")
+
+
+
+    }
+
+//Evento
+
+document.addEventListener("click", (e)=>{
+    if(e.target === $submit){
+        e.preventDefault();
+        validateInputs();
+  //      console.log("Hola mundo!")
+    }
+});
+</script>
+    </body>
+</html>
