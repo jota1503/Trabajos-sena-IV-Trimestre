@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puerta</title>
+</head>
+<body>
+    <script>
+        let respuestaAbrir = prompt("¿Desea abrir la puerta? (Si/No)");
+if (respuestaAbrir.toLowerCase() === "si") {
+  let respuestaLlaves = prompt("¿Tiene las llaves de la puerta? (Si/No)");
+  if (respuestaLlaves.toLowerCase() === "si") {
+    console.log("Puerta abierta");
+  } else {
+    console.log("No tiene las llaves, no se puede abrir la puerta");
+  }
+} else {
+  console.log("No desea abrir la puerta");
+}
+    </script>
+    
+</body>
+</html>
